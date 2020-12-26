@@ -1,0 +1,363 @@
+*{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -o-box-sizing: border-box;
+   box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contanier{
+    width: 1170px;
+    margin: auto;
+}
+/* Start NavBar */
+ h1 .fa{
+    margin-right: 10px;
+}
+
+.navbar-links ul{
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links ul li{
+margin-right: 15px;
+
+}
+.navbar-links ul li:first-child{
+    text-decoration: underline;
+}
+.navbar-links ul li:hover{
+    text-decoration: underline;
+}
+.navbar-links ul li a{
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+/* End NavBar */
+
+/* Start Header */
+
+.img{
+    background:url('../img/img1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 50px;
+    padding: 20px;
+    height: 600px;
+    position: relative;
+}
+.img .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.img .overlay:hover{
+    background-color: rgb(0,250,154, .2);
+    transition: background-color .5s linear;
+}
+.img h2{
+   color: #FFF;
+   font-size: 60px;
+   font-weight: bold;
+   border-bottom: 5px solid #FFF;
+   border-top: 5px solid #FFF;
+   position: absolute;
+   top: 30%;
+   left: 41%;
+
+}
+.img p{
+    color:#FFF;
+    font-size: 20px;
+    background-color: #117859;
+    padding: 15px;
+    width: 50%;
+    position: absolute;
+    left: 27%;
+    top: 63%;
+}
+/* End Header */
+
+/* Start About-Us */
+.about-us{
+    padding-top: 70px;
+}
+.about-us h2{
+    color:#444;
+    font-size: 50px;
+}
+.info-about-us{
+    overflow: hidden;
+}
+.info-about-us .pragraph,
+.info-about-us .img-random{
+width: 48%;
+margin-right: 2px;
+}
+.info-about-us .pragraph > p{
+   line-height: 1.8;
+   color:#444;
+}
+.info-about-us .img-random img{
+    width:550px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 19px;
+}
+/* End About-Us */
+
+/* Start Services */
+.services{
+    margin-top: 70px;
+    background-color: #FAFAFA;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    height: 645px;
+}
+
+.services h2{
+    color:#444;
+    font-size: 50px;
+}
+.services .info-services{
+    overflow: hidden;
+    text-align: center;
+}
+.services .info-services > div{
+    float: left;
+    width: 25%;
+}
+.services .info-services > div img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: transform .5s ease;
+  }
+
+  .services .info-services > div img:hover {
+    transform: scale3d(.9,.9,.9);
+  }
+.services .info-services > div h3{
+    color:#222;
+    font-size: 20px;
+}
+.services .info-services > div p{
+line-height: 1.8;
+}
+.services .info-services > div > a {
+    text-decoration: none;
+  }
+  
+  
+  .button {
+    display: inline-block;
+    padding: 10px 24px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .button:active {
+    transform: translateY(1px);
+  }
+  
+  .button--fun {
+    position: relative;
+    border-color: #117859;
+    color: #117859;
+  }
+  
+  .button--fun a {
+    color: #117859;
+    text-decoration: none;
+  }
+  
+  .button--fun:before {
+    content: "";
+    transform-origin: center bottom;
+    transform: scale3d(1, 0, 1);
+    transition: transform 0.25s ease;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: calc(100% + 1px);
+    height: 100%;
+    background-color: #117859;
+  }
+  
+  .button .button__content {
+    transition: color 0.25s ease;
+    display: inline-flex;
+    flex-direction: column;
+  }
+  
+  .button--fun:hover .button__content {
+    position: relative;
+    color: #FFF;
+  }
+  
+  .button--fun:hover {
+    cursor: pointer;
+  }
+  
+  .button--fun:hover::before {
+    transform: scale3d(1, 1, 1);
+  }
+/* End Services */
+
+/* Start Slider */
+.slider-container {
+    margin: 10px auto;
+    width: 100%;
+    height: 500px;
+    padding-top: 70px;
+    position: relative;
+  }
+  .slider-container img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+  }
+  .slider-container img.active {
+    opacity: 1;
+  }
+
+  .slider-controls {
+    width: 100%;
+    overflow: hidden;
+  }
+  .slider-controls .prev,
+  .slider-controls .next {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    color: #FFF;
+    width: 50%;
+    font-size: 50px;
+  }
+  .slider-controls .next {
+      right: -40%;
+      top:67%;
+  }
+  .slider-controls .prev{
+      top: 67%;
+      left: 7%;
+  }
+  .slider-controls .prev.disabled,
+  .slider-controls .next.disabled {
+    color:#000;
+    cursor: no-drop;
+  }
+/* End Slider */
+
+
+/* Start Contact-Us */
+
+.contact-us{
+    padding-top: 80px;
+
+}
+.contact-us .contanier{
+    overflow: hidden;
+}
+.contact-us h2{
+    color: #444;
+    font-size: 50px;
+}
+.contact-us .contanier > div{
+    width:40%;
+    margin: 20px 5px 0;
+  
+}
+
+.contact-us .contanier div P{
+    color:#444
+}
+.contact-us .contanier div P .fa{
+    margin-right: 5px;
+}
+
+.contact-us div form input,
+.contact-us div form button {
+display: block;
+}
+.contact-us div form input{
+    margin-bottom: 10px;
+    background: none;
+    outline: none;
+    border: none;
+    border: 2px solid #117859;
+    padding: 8px;
+    border-radius: 8px;
+}
+.contact-us div form input:hover{
+width: 436px;
+transition: all 1s linear;
+}
+.contact-us div form textarea{
+    border: none;
+    background: none;
+    outline: none;
+    border: 2px solid #117859;
+    padding: 8px;
+    border-radius: 8px;
+}
+.contact-us div form a{
+    text-decoration: none;
+    margin-top: 30px;
+    width: 436px;
+}
+/* End Contact-Us */
+
+/* Start Footer */
+footer{
+  padding-top: 70px;
+  margin-top: 50px;
+  background-color: #117859;
+  text-align: center;
+}
+footer ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer ul li{
+  display: inline-block;
+  margin-bottom: 50px;
+  margin-right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+footer ul li .fa{
+  line-height: 60px;
+}
+/* End Footer */
+
+/* Start FramEork */
+
+.float-ri{
+    float: right;
+}
+.float-le{
+    float: left;
+}
+.text-align{
+    text-align: center;
+}
+/* End FrameWork */
